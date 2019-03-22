@@ -1,7 +1,4 @@
-
-typedef unsigned long long int ull;
-
-void alessio(ull base, ull esponente){
+void alessio(int64_t base, int64_t esponente){
 	ull potenze[100];
 	ull soluzione=1;
 	int logaritmo=log2(esponente);
