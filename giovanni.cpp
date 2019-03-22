@@ -11,10 +11,16 @@ ull pow_(ull a, ull n){
 	vals[n] = b;
 	return b;
 }
-void giovanni(ull a, ull n){
+void* giovanni(void* INDEX){
+    auto m_start=chrono::high_resolution_clock::now();
+
+    ull a=B, n=E;
 	vals = new ull[n];
-	cout<<pow_(a, n);
+	//cout<<"Giovanni: "<<pow_(a, n)<<endl;
 	delete vals;
+
+	TEMPO[(int)INDEX]=std::chrono::duration<float>{std::chrono::high_resolution_clock::now() - m_start}.count();
+	RISULTATO[(int)INDEX]=pow_(a, n);
 }
 
 

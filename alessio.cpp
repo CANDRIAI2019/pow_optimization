@@ -1,4 +1,7 @@
-void alessio(ull base, ull esponente){
+void* alessio(void* INDEX){
+    auto m_start=std::chrono::high_resolution_clock::now();
+
+    ull base=B, esponente=E;
 	ull potenze[100];
 	ull soluzione=1;
 	int logaritmo=log2(esponente);
@@ -16,5 +19,9 @@ void alessio(ull base, ull esponente){
 			soluzione=soluzione*potenze[a];
 		}
 	}
-	fprintf(stdout,"alessio: %llu\n",soluzione);
+	//fprintf(stdout,"Alessio: %llu\n",soluzione);
+	//cout<<"Alessio: "<<soluzione<<endl;
+
+	TEMPO[(int)INDEX]=std::chrono::duration<float>{std::chrono::high_resolution_clock::now() - m_start}.count();
+	RISULTATO[(int)INDEX]=soluzione;
 }
