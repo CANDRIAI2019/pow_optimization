@@ -13,7 +13,7 @@ ull pow_(ull a, ull n){
 }
 void giovanni(ull a, ull n){
 	vals = new ull[n];
-	pow_(a, n);
+	cout<<pow_(a, n);
 	delete vals;
 }
 
