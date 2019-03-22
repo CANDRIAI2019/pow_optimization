@@ -16,5 +16,5 @@ void alessio(int64_t base, int64_t esponente){
 			soluzione=soluzione*potenze[a];
 		}
 	}
-	fprintf(stdout,"%llu",soluzione);
+	fprintf(stdout,"alessio: %llu\n",soluzione);
 }
